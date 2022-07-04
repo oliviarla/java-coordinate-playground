@@ -1,6 +1,6 @@
-package rent.domain;
+package rent.domain2;
 
-public class Sonata extends Car{
+public class Sonata extends Car {
     private static final int distancePerLiter = 10;
     private final int tripDistance;
 

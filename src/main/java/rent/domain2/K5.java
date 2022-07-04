@@ -1,10 +1,10 @@
-package rent.domain;
+package rent.domain2;
 
-public class Sonata extends Car{
-    private static final int distancePerLiter = 10;
+public class K5 extends Car {
+    private static final int distancePerLiter = 13;
     private final int tripDistance;
 
-    public Sonata(int tripDistance) {
+    public K5(int tripDistance) {
         this.tripDistance = tripDistance;
     }
 
@@ -20,6 +20,6 @@ public class Sonata extends Car{
 
     @Override
     public String getName() {
-        return "Sonata";
+        return "K5";
     }
 }
