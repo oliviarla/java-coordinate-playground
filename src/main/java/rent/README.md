@@ -13,13 +13,13 @@
 
 ### 구현 목록
 
-- [ ] Car 추상 클래스
-- [ ] Sonata, K5, Avante 클래스
-  - [ ] getDistancePerLiter: 연비(리터 당 이동거리) 반환
-  - [ ] getTripDistance: 여행 거리 반환
-  - [ ] getName: 차 이름 반환
-  - [ ] getChargeQuantity: 주입해야 할 연료 양 반환
-
-
-- [ ] RentCompany 클래스
-  - [ ] addCar
+- [x] Car 추상 클래스
+- [x] Sonata, K5, Avante 클래스
+  - [x] getDistancePerLiter: 연비(리터 당 이동거리) 반환
+  - [x] getTripDistance: 여행 거리 반환
+  - [x] getName: 차 이름 반환
+  - [x] getChargeQuantity: 주입해야 할 연료 양 반환
+  
+- [x] RentCompany 클래스
+  - [x] addCar: 내부 carList에 객체 추가 
+  - [x] generateReport: 출력을 위한 report String 형식으로 반환
