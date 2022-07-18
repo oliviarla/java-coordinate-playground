@@ -16,13 +16,26 @@
 
 ## 기능 목록
 `View` Package
-- [ ] InputView: 좌표 입력받음
+- [x] InputView: 좌표 입력받음
 - [ ] OutputView: 좌표 및 길이 출력
   - [ ] printCoord(): 좌표 2차원으로 출력
-  - [ ] printLength(): 좌표값 두개 입력받을 때 길이 출력
 
 `Domain` Package
-- [ ] Coord: 좌표 정보를 담는 객체
-  - [ ] validate() : 좌표 유효성 체크
-- [ ] Line: 두 좌표를 입력받은 후 길이를 담는 객체
-  - [ ] makeLine(): 두 좌표로부터 길이 계산
+- [x] Point: 좌표 정보를 담는 객체
+  - [x] validate() : 좌표 유효성 체크
+- [x] Points: 여러 좌표를 담는 객체
+
+
+- [x] Shape: 도형들의 추상 클래스
+  [x] calc(): 넓이 혹은 길이를 계산
+  [x]output(): 넓이 혹은 길이를 출력
+- [x] Length: 두 좌표를 입력받은 후 길이를 담는 객체
+  - [x] makeLine(): 두 좌표로부터 길이 계산
+- [ ] Triangle: 세 좌표를 입력받은 후 삼각형의 넓이를 담는 객체
+  - [ ] 넓이 계산 로직 필요
+- [ ] Rectangle: 네 좌표를 입력받은 후 사각형의 넓이를 담는 객체
+  - [ ] 넓이 계산 로직 필요
+
+`factory` Package
+- [x] ShapeFactory: 팩토리 인터페이스
+- [x] DefaultShapeFactory: Points의 사이즈에 따라 서로 다른 Shape 객체를 반환
