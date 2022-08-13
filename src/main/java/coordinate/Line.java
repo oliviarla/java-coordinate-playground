@@ -19,11 +19,11 @@ public class Line extends AbstractFigure{
 
     @Override
     public double area() {
-        return points.get(0).getDistance(points.get(1));
+        return getPoint(0).getDistance(getPoint(1));
     }
 
     @Override
-    public void output(){
-        System.out.printf("두 점 사이의 거리는 %f", area());
+    public String output(){
+        return String.format("두 점 사이의 거리는 %f", area());
     }
 }

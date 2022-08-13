@@ -1,13 +1,11 @@
 package coordinate;
 
-public interface Figure {
-    Points getPoints();
-
+public interface Figure{
     int size();
 
     String getName();
 
     double area();
 
-    void output();
+    String output();
 }

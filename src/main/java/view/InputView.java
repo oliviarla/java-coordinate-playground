@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class InputView {
-    Scanner scanner = new Scanner(System.in);
+    private final static Scanner scanner = new Scanner(System.in);
 
     public Points inputPoint(){
         System.out.println("좌표를 입력하세요.");
@@ -20,8 +20,7 @@ public class InputView {
         String[] strings = s.split("-");
         for(String str: strings){
             List<Integer> numbers = new ArrayList<>();
-            List<String> nums;
-            nums = Arrays.stream(str.split("\\(|,|\\)")).filter(t -> !t.isEmpty()).collect(Collectors.toList());
+            List<String> nums = Arrays.stream(str.split("\\(|,|\\)")).filter(t -> !t.isEmpty()).collect(Collectors.toList());
             for(String n: nums){
                 numbers.add(Integer.valueOf(n));
             }

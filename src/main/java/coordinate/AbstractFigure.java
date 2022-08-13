@@ -1,7 +1,11 @@
 package coordinate;
 
 public abstract class AbstractFigure implements Figure {
-    protected final Points points;
+    private final Points points;
+
+    protected final Point getPoint(int idx){
+        return points.get(idx);
+    }
 
     public AbstractFigure(Points points) {
         if (points.size() != size()) {
@@ -9,14 +13,5 @@ public abstract class AbstractFigure implements Figure {
         }
 
         this.points = points;
-    }
-
-//    protected Point getPoint(int index) {
-//        return points.getPoints().get(index);
-//    }
-
-    @Override
-    public Points getPoints() {
-        return points;
     }
 }

@@ -23,20 +23,19 @@ public class Triangle extends AbstractFigure {
     @Override
     public double area() {
         List<Double> distances = new ArrayList<>();
-        distances.add(points.get(0).getDistance(points.get(1)));
-        distances.add(points.get(1).getDistance(points.get(2)));
-        distances.add(points.get(2).getDistance(points.get(0)));
-        Double s = distances.stream().mapToDouble(i->i).sum() /2;
-        Double result = s;
-        for(Double d: distances){
-            result *= (s-d);
-        }
+        distances.add(getPoint(0).getDistance(getPoint(1)));
+        distances.add(getPoint(1).getDistance(getPoint(2)));
+        distances.add(getPoint(2).getDistance(getPoint(0)));
+
+        Double s = distances.stream().mapToDouble(i->i).reduce(Double::sum).getAsDouble() / 2;
+
+        Double result = distances.stream().reduce(s, (a, b) -> a*(s-b));
 
         return Math.sqrt(result);
     }
 
     @Override
-    public void output() {
-        System.out.printf("삼각형 넓이는 %f", area());
+    public String output() {
+        return String.format("삼각형 넓이는 %f", area());
     }
 }

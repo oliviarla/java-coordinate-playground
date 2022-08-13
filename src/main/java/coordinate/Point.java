@@ -7,15 +7,15 @@ public class Point {
     private final int y;
 
     private Point(int x, int y) {
-        this.x = x;
         if (x < 0 || x > 24) {
             throw new IllegalArgumentException();
         }
-
-        this.y = y;
         if (y < 0 || y > 24) {
             throw new IllegalArgumentException();
         }
+
+        this.x = x;
+        this.y = y;
     }
 
     public double getDistance(Point other) {

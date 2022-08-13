@@ -23,7 +23,7 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public void output() {
-        System.out.printf("사각형 넓이는 %d", area());
+    public String output() {
+        return String.format("사각형 넓이는 %f", area());
     }
 }
